@@ -10,7 +10,7 @@ public class UserController {
         return "get User";
     }
     @PostMapping
-    public String createUser() {
+    public String createUser(RequestBody UserDetailsRequestModel userDetails) {
         return "create User";
     }
     @PutMapping
