@@ -1,5 +1,6 @@
 package com.appsdeveloperblog.app.ws.ui.controller;
 
+import com.appsdeveloperblog.app.ws.shared.dto.UserDto;
 import com.appsdeveloperblog.app.ws.ui.model.request.UserDetailsRequestModel;
 import com.appsdeveloperblog.app.ws.ui.model.response.UserRest;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,9 @@ public class UserController {
     }
     @PostMapping
     public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) {
+        UserRest returnValue = new UserRest();
+        UserDto userDto = new UserDto();
+
         return null;
     }
     @PutMapping
