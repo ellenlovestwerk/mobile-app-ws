@@ -3,7 +3,7 @@ package com.appsdeveloperblog.app.ws.shared.dto;
 import java.io.Serializable;
 
 public class UserDto implements Serializable {
-    private static final long serialVersionUID = 1L;
+
     private long id;
     private String userId;
     private String firsName;
