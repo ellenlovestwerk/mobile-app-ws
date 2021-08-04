@@ -1,5 +1,7 @@
 package com.appsdeveloperblog.app.ws.ui.controller;
 
+import com.appsdeveloperblog.app.ws.ui.model.request.UserDetailsRequestModel;
+import com.appsdeveloperblog.app.ws.ui.model.response.UserRest;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -10,8 +12,8 @@ public class UserController {
         return "get User";
     }
     @PostMapping
-    public String createUser(RequestBody UserDetailsRequestModel userDetails) {
-        return "create User";
+    public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) {
+        return null;
     }
     @PutMapping
     public String updateUser() {
