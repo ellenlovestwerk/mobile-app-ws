@@ -2,7 +2,7 @@ package com.appsdeveloperblog.app.ws.ui.model.response;
 
 public class UserRest {
     private String userId;
-    private String firsName;
+    private String firstName;
     private String lastName;
     private String email;
 
@@ -14,12 +14,12 @@ public class UserRest {
         this.userId = userId;
     }
 
-    public String getFirsName() {
-        return firsName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirsName(String firsName) {
-        this.firsName = firsName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {

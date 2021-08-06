@@ -1,12 +1,12 @@
-package com.appsdeveloperblog.app.ws.shared.dto;
+package com.appsdeveloperblog.app.ws.shared;
 
 import java.io.Serializable;
 
 public class UserDto implements Serializable {
-
+    private static final long serialVersionID = 1L;
     private long id;
     private String userId;
-    private String firsName;
+    private String firstName;
     private String lastName;
     private String email;
     private String password;
@@ -30,12 +30,12 @@ public class UserDto implements Serializable {
         this.userId = userId;
     }
 
-    public String getFirsName() {
-        return firsName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirsName(String firsName) {
-        this.firsName = firsName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
