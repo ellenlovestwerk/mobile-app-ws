@@ -4,6 +4,7 @@ import com.appsdeveloperblog.app.ws.service.UserService;
 import com.appsdeveloperblog.app.ws.shared.UserDto;
 import com.appsdeveloperblog.app.ws.ui.model.request.UserDetailsRequestModel;
 import com.appsdeveloperblog.app.ws.ui.model.response.UserRest;
+import org.apache.catalina.User;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,9 +15,12 @@ public class UserController {
 
     @Autowired
     UserService userService;
-    @GetMapping
-    public String getUser() {
-        return "get User";
+    @GetMapping(path="/{id}")
+    public UserRest getUser(@PathVariable String id) {
+        UserRest returnValue = new UserRest();
+        UserDto userDto = userService.getUserByUserId(id);
+        BeanUtils.copyProperties(userDto,returnValue);
+        return returnValue;
     }
     @PostMapping
     public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) {
