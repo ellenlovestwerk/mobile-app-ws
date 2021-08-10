@@ -13,7 +13,7 @@ public class UserEntity implements Serializable {
 
     @Column(nullable=false)
     private String userId;
-    @Column(nullable=false, length =50)
+    @Column(nullable=false,length =50)
     private String firstName;
     @Column(nullable=false, length =50)
     private String lastName;
