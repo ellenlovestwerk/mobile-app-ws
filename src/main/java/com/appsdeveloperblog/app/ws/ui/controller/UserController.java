@@ -7,6 +7,7 @@ import com.appsdeveloperblog.app.ws.ui.model.response.UserRest;
 import org.apache.catalina.User;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,7 +16,7 @@ public class UserController {
 
     @Autowired
     UserService userService;
-    @GetMapping(path="/{id}")
+    @GetMapping(path="/{id}", produces = MediaType.APPLICATION_XML_VALUE)
     public UserRest getUser(@PathVariable String id) {
         UserRest returnValue = new UserRest();
         UserDto userDto = userService.getUserByUserId(id);
