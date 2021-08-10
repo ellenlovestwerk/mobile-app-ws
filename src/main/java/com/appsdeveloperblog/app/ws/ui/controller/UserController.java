@@ -38,7 +38,8 @@ public class UserController {
         BeanUtils.copyProperties(createdUser, returnValue);
         return returnValue;
     }
-    @PutMapping
+
+    @PutMapping(path="/{id}",  consumes = {MediaType.APPLICATION_JSON_VALUE,  MediaType.APPLICATION_XML_VALUE},produces = {MediaType.APPLICATION_JSON_VALUE,  MediaType.APPLICATION_XML_VALUE})
     public String updateUser() {
         return "update User";
     }
